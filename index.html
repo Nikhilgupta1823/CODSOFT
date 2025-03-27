@@ -1,74 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Linking CSS -->
+    <title>Interactive Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-    <div class="navbar">Calculator</div> <!-- Navbar -->
-
-    <div class="calculator">
-        <div class="display" id="display">0</div> <!-- Display Screen -->
-        <div class="buttons">
-            <button class="clear" onclick="clearDisplay()">C</button>
-            <button class="extra" onclick="appendToDisplay('%')">%</button>
-            <button class="dark-mode" onclick="toggleSign()">±</button>
-            <button class="operator" onclick="appendToDisplay('/')">÷</button>
-
-            <button class="number" onclick="appendToDisplay('7')">7</button>
-            <button class="number" onclick="appendToDisplay('8')">8</button>
-            <button class="number" onclick="appendToDisplay('9')">9</button>
-            <button class="operator" onclick="appendToDisplay('*')">×</button>
-
-            <button class="number" onclick="appendToDisplay('4')">4</button>
-            <button class="number" onclick="appendToDisplay('5')">5</button>
-            <button class="number" onclick="appendToDisplay('6')">6</button>
-            <button class="operator" onclick="appendToDisplay('-')">−</button>
-
-            <button class="number" onclick="appendToDisplay('1')">1</button>
-            <button class="number" onclick="appendToDisplay('2')">2</button>
-            <button class="number" onclick="appendToDisplay('3')">3</button>
-            <button class="operator" onclick="appendToDisplay('+')">+</button>
-
-            <button class="number" onclick="appendToDisplay('0')">0</button>
-            <button class="extra" onclick="appendToDisplay('.')">.</button>
-            <button class="equal" onclick="calculateResult()">=</button>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="nav-container">
+            <h1 class="logo">MyBrand - Creative Web Solutions</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="btn">Get Started</a>
         </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Welcome to Our Creative Space</h1>
+            <p>Building visually stunning and interactive web experiences.</p>
+            <a href="#services" class="btn">Explore More</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We are passionate web designers and developers focused on delivering high-quality, animated, and interactive
+            websites.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="card">
+                <img src="https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg"
+                    alt="Web Design">
+                <h3>Web Design</h3>
+                <p>Modern and stylish designs with smooth interactions.</p>
+            </div>
+            <div class="card">
+                <img src="https://t3.ftcdn.net/jpg/02/14/87/96/360_F_214879686_R3HFJlk6WLr1kcdvy6Q9rtNASKN0BZBS.jpg"
+                    alt="Development">
+                <h3>Development</h3>
+                <p>Fully responsive and dynamic website solutions.</p>
+            </div>
+            <div class="card">
+                <img src="https://www.webnode.com/blog/wp-content/uploads/2021/03/SEO.jpg" alt="SEO Optimization">
+                <h3>SEO Optimization</h3>
+                <p>Boost your website's performance and ranking.</p>
+            </div>
+        </div>
+    </section>
+
+   <!-- Contact Section -->
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Have a project in mind? Let's build something amazing together.</p>
+    
+    <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:contact@mybrand.com">contact@mybrand.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+1234567890">+123 456 7890</a></p>
+        <p><strong>Address:</strong> 123 Web Street, Coding City, 45678</p>
     </div>
 
-    <script>
-        let display = document.getElementById("display");
+    <!-- Contact Form -->
+    <form action="#" class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</section>
 
-        function appendToDisplay(value) {
-            if (display.innerText === "0" && value !== ".") {
-                display.innerText = value;
-            } else {
-                display.innerText += value;
-            }
-        }
 
-        function clearDisplay() {
-            display.innerText = "0";
-        }
-
-        function calculateResult() {
-            try {
-                display.innerText = eval(display.innerText);
-            } catch (error) {
-                display.innerText = "Error";
-            }
-        }
-
-        function toggleSign() {
-            let current = display.innerText;
-            if (current !== "0") {
-                display.innerText = current.startsWith("-") ? current.substring(1) : "-" + current;
-            }
-        }
-    </script>
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 MyBrand - Creative Web Solutions. All rights reserved.</p>
+    </footer>
 
 </body>
+
 </html>

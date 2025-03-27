@@ -1,129 +1,261 @@
+/* General Styles */
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
     margin: 0;
-    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
-    font-family: Arial, sans-serif;
-}
-
-/* Navbar Styling */
-.navbar {
-    width: 100%;
-    background: #333;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
     color: white;
     text-align: center;
-    padding: 15px 0;
-    font-size: 1.5em;
-    font-weight: bold;
+}
+
+/* Navbar */
+header {
     position: fixed;
     top: 0;
-    left: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Calculator Container */
-.calculator {
-    width: 320px;
-    background: #222;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    margin-top: 80px;
-}
-
-/* Display Screen */
-.display {
     width: 100%;
-    height: 60px;
-    background: #444;
-    color: white;
-    text-align: right;
-    font-size: 2em;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    overflow: hidden;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
-/* Buttons Layout */
-.buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-}
-
-/* Button Styling */
-button {
+.nav-container {
     width: 100%;
-    height: 60px;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.5em;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
     font-weight: bold;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-button:hover {
-    transform: scale(1.1);
-    filter: brightness(1.2);
-}
-
-/* Button Colors */
-.operator {
-    background: #ff6f61;
     color: white;
 }
 
-.operator:hover {
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff6f61;
+}
+
+/* Button Style */
+.btn {
+    background: #ff6f61;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
     background: #ff4136;
 }
 
-.number {
-    background: #4caf50;
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('background.jpg') no-repeat center center/cover;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* About Section */
+.about {
+    padding: 60px 10%;
+    background: white;
+    color: black;
+}
+
+/* Services Section */
+.services {
+    padding: 60px 10%;
+    background: #222;
+}
+
+.services h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 250px;
+    padding: 20px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 10%;
+    background: linear-gradient(45deg, #ff6f61, #ff9a9e);
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background: #ff4136;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #ff1e00;
+}
+
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: black;
     color: white;
 }
 
-.number:hover {
-    background: #45a049;
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.clear {
-    background: #f1c40f;
-    color: white;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 5%;
+    }
 
-.clear:hover {
-    background: #d4ac0d;
-}
+    .nav-links {
+        gap: 15px;
+    }
 
-.equal {
-    background: #3498db;
-    color: white;
-}
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.equal:hover {
-    background: #2980b9;
-}
+    .card {
+        width: 90%;
+    }
 
-/* Additional Button Colors */
-.extra {
-    background: #9b59b6;
-    color: white;
-}
-
-.extra:hover {
-    background: #8e44ad;
-}
-
-.dark-mode {
-    background: #2c3e50;
-    color: white;
-}
-
-.dark-mode:hover {
-    background: #1f2c38;
+    .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
 }
