@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Linking CSS -->
+</head>
+<body>
+
+    <div class="navbar">Calculator</div> <!-- Navbar -->
+
+    <div class="calculator">
+        <div class="display" id="display">0</div> <!-- Display Screen -->
+        <div class="buttons">
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button class="extra" onclick="appendToDisplay('%')">%</button>
+            <button class="dark-mode" onclick="toggleSign()">±</button>
+            <button class="operator" onclick="appendToDisplay('/')">÷</button>
+
+            <button class="number" onclick="appendToDisplay('7')">7</button>
+            <button class="number" onclick="appendToDisplay('8')">8</button>
+            <button class="number" onclick="appendToDisplay('9')">9</button>
+            <button class="operator" onclick="appendToDisplay('*')">×</button>
+
+            <button class="number" onclick="appendToDisplay('4')">4</button>
+            <button class="number" onclick="appendToDisplay('5')">5</button>
+            <button class="number" onclick="appendToDisplay('6')">6</button>
+            <button class="operator" onclick="appendToDisplay('-')">−</button>
+
+            <button class="number" onclick="appendToDisplay('1')">1</button>
+            <button class="number" onclick="appendToDisplay('2')">2</button>
+            <button class="number" onclick="appendToDisplay('3')">3</button>
+            <button class="operator" onclick="appendToDisplay('+')">+</button>
+
+            <button class="number" onclick="appendToDisplay('0')">0</button>
+            <button class="extra" onclick="appendToDisplay('.')">.</button>
+            <button class="equal" onclick="calculateResult()">=</button>
+        </div>
+    </div>
+
+    <script>
+        let display = document.getElementById("display");
+
+        function appendToDisplay(value) {
+            if (display.innerText === "0" && value !== ".") {
+                display.innerText = value;
+            } else {
+                display.innerText += value;
+            }
+        }
+
+        function clearDisplay() {
+            display.innerText = "0";
+        }
+
+        function calculateResult() {
+            try {
+                display.innerText = eval(display.innerText);
+            } catch (error) {
+                display.innerText = "Error";
+            }
+        }
+
+        function toggleSign() {
+            let current = display.innerText;
+            if (current !== "0") {
+                display.innerText = current.startsWith("-") ? current.substring(1) : "-" + current;
+            }
+        }
+    </script>
+
+</body>
+</html>
