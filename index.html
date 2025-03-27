@@ -4,91 +4,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- Header Section -->
     <header>
-        <div class="nav-container">
-            <h1 class="logo">MyBrand - Creative Web Solutions</h1>
+        <div class="container">
+            <h1>NIKHIL GUPTA</h1>
+            <p>Creative Developer | Passionate about Building Beautiful & Functional Web Experiences"</p>
             <nav>
-                <ul class="nav-links">
+                <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <a href="#contact" class="btn">Get Started</a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Welcome to Our Creative Space</h1>
-            <p>Building visually stunning and interactive web experiences.</p>
-            <a href="#services" class="btn">Explore More</a>
-        </div>
-    </section>
-
     <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>We are passionate web designers and developers focused on delivering high-quality, animated, and interactive
-            websites.</p>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="service-cards">
-            <div class="card">
-                <img src="https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg"
-                    alt="Web Design">
-                <h3>Web Design</h3>
-                <p>Modern and stylish designs with smooth interactions.</p>
-            </div>
-            <div class="card">
-                <img src="https://t3.ftcdn.net/jpg/02/14/87/96/360_F_214879686_R3HFJlk6WLr1kcdvy6Q9rtNASKN0BZBS.jpg"
-                    alt="Development">
-                <h3>Development</h3>
-                <p>Fully responsive and dynamic website solutions.</p>
-            </div>
-            <div class="card">
-                <img src="https://www.webnode.com/blog/wp-content/uploads/2021/03/SEO.jpg" alt="SEO Optimization">
-                <h3>SEO Optimization</h3>
-                <p>Boost your website's performance and ranking.</p>
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="file:/C:/Users/nikhi/OneDrive/Pictures/Nikhil.jpg.jpg" alt="My Profile">
+                <p>Hello! I'm a passionate web developer specializing in front-end technologies. I build responsive,
+                    interactive, and user-friendly websites with a strong focus on modern UI/UX design. I love crafting
+                    clean, fast, and engaging web experiences using the latest technologies. Let’s create something
+                    amazing together! 🚀</p>
             </div>
         </div>
     </section>
 
-   <!-- Contact Section -->
-<section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>Have a project in mind? Let's build something amazing together.</p>
-    
-    <div class="contact-info">
-        <p><strong>Email:</strong> <a href="mailto:contact@mybrand.com">contact@mybrand.com</a></p>
-        <p><strong>Phone:</strong> <a href="tel:+1234567890">+123 456 7890</a></p>
-        <p><strong>Address:</strong> 123 Web Street, Coding City, 45678</p>
-    </div>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>React.js</li>
+                <li>UI/UX Design</li>
+                <li>Responsive Web Development</li>
+            </ul>
+        </div>
+    </section>
 
-    <!-- Contact Form -->
-    <form action="#" class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-    </form>
-</section>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-list">
+                <div class="project">
+                    <img src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2022/04/web-developer-portfolio.png"
+                        alt="Project 1">
+                    <h3>Portfolio Website</h3>
+                    <p>A modern and responsive portfolio website.</p>
+                    <a href="#">View Project</a>
+                </div>
+                <div class="project">
+                    <img src="https://5.imimg.com/data5/II/VJ/MY-62393270/ecommerce-website.png" alt="Project 2">
+                    <h3>E-Commerce Store</h3>
+                    <p>Fully functional online shopping platform.</p>
+                    <a href="#">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Resume Section -->
+    <section id="resume" class="section">
+        <div class="container">
+            <h2>Resume</h2>
+            <a href="file:/C:/Users/nikhi/Downloads/NIKHIL.PDF.pdf" download class="btn">Download Resume</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Have a project in mind or need a developer? Let's talk! Feel free to reach out via email or phone.</p>
+            <p>Email: <a href="ng630610275@gmail.com">ng630610275@gmailcom</a></p>
+            <p>Phone: <a href="tel:+1234567890">+1234567890</a></p>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 MyBrand - Creative Web Solutions. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 Nikhil Gupta. All rights reserved.</p>
+        </div>
     </footer>
 
 </body>
